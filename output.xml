@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200803 13:59:01.075" rpa="false">
+<suite id="s1" name="Reservar Salas" source="C:\Users\mcelestino\projects\AmonraTests\reservar_salas.robot">
+<test id="s1-t1" name="Should See Page Title">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>http://amonra2:9005/netpa/page</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200803 13:59:01.353" level="INFO">Opening browser 'chrome' to base url 'http://amonra2:9005/netpa/page'.</msg>
+<status status="PASS" starttime="20200803 13:59:01.352" endtime="20200803 13:59:05.177"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Netpa página de entrada</arg>
+</arguments>
+<msg timestamp="20200803 13:59:05.192" level="INFO">Page title is 'Netpa página de entrada'.</msg>
+<status status="PASS" starttime="20200803 13:59:05.178" endtime="20200803 13:59:05.192"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200803 13:59:05.193" endtime="20200803 13:59:07.367"></status>
+</kw>
+<status status="PASS" starttime="20200803 13:59:01.351" endtime="20200803 13:59:07.369" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Sucess Login">
+<status status="FAIL" starttime="20200803 13:59:07.376" endtime="20200803 13:59:07.379" critical="yes">Test case contains no keywords.</status>
+</test>
+<status status="FAIL" starttime="20200803 13:59:01.077" endtime="20200803 13:59:07.390"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1">Critical Tests</stat>
+<stat pass="1" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" id="s1" name="Reservar Salas">Reservar Salas</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
