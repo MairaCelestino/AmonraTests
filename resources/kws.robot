@@ -9,20 +9,38 @@ Dado que acesso a página principal
 
 Quando submeto o meu utilizador "${utilizador}"
     Click Element       ${REGISTER}
-    Sleep               2
+    #Sleep               2
     Click Element       ${USER}
-    Sleep               1
+    #Sleep               1
     Input Text          ${USER}      ${utilizador}    
     
 
 E a palavra-chave "${password}" 
-    Sleep               1
+    #Sleep               1
     Input Text         ${PASS}     ${password}    
+    Sleep              5
 
 E clico em Entrar
-    Click Element       ${BOTAO_ENTRAR}
-    Sleep               5
+   # Set Selenium Implicit Wait   5
+    Click Element           ${BOTAO_ENTRAR}
+   
+    #Sleep               5
 
 Então devo ser autenticado
-    Wait Until Page Contains       Tem inquéritos por preencher    15
-    Click Element                  ${TOMEI_CONH} 
+    #Wait Until Page Contains       Tem inquéritos por preencher    15
+    Sleep               5
+    Wait Until Element Is Visible    ${TOMEI_CONH}
+    Click Element                    ${BOTAO_TOMEI_CONH}
+
+##Keyword do cenário logion com user inexistente  
+Então devo ver a mensagem "${expect_message}"
+    Sleep              5
+    Wait Until Element Contains      ${DIV_ALERT}   ${expect_message}
+    Sleep              5
+    Click Element                    ${BOTAO_OK} 
+    Sleep              2
+
+##Keyword do cenário logion com password inexistente
+#Então devo ver a mensagem "${expect_message_pass}"
+ #   Wait Until Page Contains       ${expect_message_pass}
+  #  Click Element                  OK

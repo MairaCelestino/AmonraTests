@@ -13,6 +13,7 @@ ${URL}          http://amonra2:9005/netpa/page
 ##Hooks (Ganchos)
 Open Session
     Open Browser    about:blank     chrome
+    Set Selenium Implicit Wait   5
 
 Close Session
     Capture Page Screenshot
