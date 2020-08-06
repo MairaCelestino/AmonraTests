@@ -10,6 +10,13 @@ Resource        elements.robot
 ${URL}          http://amonra2:9005/netpa/page
 
 ***Keywords***
+Sucess Loginn
+         [tags]          login_sucess
+         Dado que acesso a página principal 
+         Quando submeto o meu utilizador "mariacp"
+         E a palavra-chave "a" 
+         E clico em Entrar 
+         Então devo ser autenticado
 ##Hooks (Ganchos)
 Open Session
     Open Browser    about:blank     chrome

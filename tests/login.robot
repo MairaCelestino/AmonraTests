@@ -9,6 +9,7 @@ Test Teardown   Close Session
 
 **Test Cases***
 Sucess Login
+         [tags]          login_sucess
          Dado que acesso a página principal 
          Quando submeto o meu utilizador "mariacp"
          E a palavra-chave "a" 

@@ -32,15 +32,26 @@ Então devo ser autenticado
     Wait Until Element Is Visible    ${TOMEI_CONH}
     Click Element                    ${BOTAO_TOMEI_CONH}
 
-##Keyword do cenário logion com user inexistente  
+##Keyword do cenário logion com user/password inexistente  
 Então devo ver a mensagem "${expect_message}"
     Sleep              5
     Wait Until Element Contains      ${DIV_ALERT}   ${expect_message}
     Sleep              5
     Click Element                    ${BOTAO_OK} 
     Sleep              2
-
-##Keyword do cenário logion com password inexistente
-#Então devo ver a mensagem "${expect_message_pass}"
- #   Wait Until Page Contains       ${expect_message_pass}
-  #  Click Element                  OK
+    Click Link          Reservar Salas
+    Wait Until Element Is Visible       css:h2.h2style  ##RESERVAR SALAS
+##Keyword do cenário Reservar Salas
+Quando clico no link "Reservar Salas"
+        Execute JavaScript window.scrollTo(0,200)
+E clico em "Reservar Sala" 
+E preencho todos os obrigatórios
+        E seleciono os campos: Ano letivo "2019-20"
+        E a Instituição "Escola Superior de Qualidade Digitalis"
+        E a Data Pretendida "13/08/2020"
+        E o Hora início "10:00" e a Duração "02:00"
+        E o Tipo Ocupação "Outros"
+        E a Sala "AVID 3D (CG-Edifício F - lotação 20)"
+        E informo uma Observação "Teste Reserva Sala 1"
+Então clico em OK
+Devo ver a Situação "Em Apreciação"
