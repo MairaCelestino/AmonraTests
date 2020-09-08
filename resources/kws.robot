@@ -12,7 +12,7 @@ Quando submeto o meu utilizador "${utilizador}"
     #Sleep               2
     Click Element       ${USER}
     #Sleep               1
-    Input Text          ${USER}      ${utilizador}    
+    Input Text          ${USER}       ${utilizador}  
     
 
 E a palavra-chave "${password}" 
@@ -31,27 +31,17 @@ Então devo ser autenticado
     Sleep               5
     Wait Until Element Is Visible    ${TOMEI_CONH}
     Click Element                    ${BOTAO_TOMEI_CONH}
+    Sleep               5
+    Execute JavaScript               window.scrollTo(0,800)
 
-##Keyword do cenário logion com user/password inexistente  
+##Keyword do cenário login com user/password inexistente  
 Então devo ver a mensagem "${expect_message}"
-    Sleep              5
-    Wait Until Element Contains      ${DIV_ALERT}   ${expect_message}
-    Sleep              5
-    Click Element                    ${BOTAO_OK} 
     Sleep              2
-    Click Link          Reservar Salas
-    Wait Until Element Is Visible       css:h2.h2style  ##RESERVAR SALAS
-##Keyword do cenário Reservar Salas
+   
+    #${DIV_ALERT}   ${expect_message}
 Quando clico no link "Reservar Salas"
-        Execute JavaScript window.scrollTo(0,200)
-E clico em "Reservar Sala" 
-E preencho todos os obrigatórios
-        E seleciono os campos: Ano letivo "2019-20"
-        E a Instituição "Escola Superior de Qualidade Digitalis"
-        E a Data Pretendida "13/08/2020"
-        E o Hora início "10:00" e a Duração "02:00"
-        E o Tipo Ocupação "Outros"
-        E a Sala "AVID 3D (CG-Edifício F - lotação 20)"
-        E informo uma Observação "Teste Reserva Sala 1"
-Então clico em OK
-Devo ver a Situação "Em Apreciação"
+    Click Link         ${LINK_RERSEVAR_SALA}
+E clico em "Reservar Sala"
+    Wait Until Element Is Visible       xpath://*[@id="contenttwocolumns"]/h2  ##RESERVAR SALAS
+    Sleep              2
+    Click Link         ${BOTAO_RESERVAR_SALA}

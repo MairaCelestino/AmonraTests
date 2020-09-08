@@ -24,4 +24,4 @@ Open Session
 
 Close Session
     Capture Page Screenshot
-    Close Browser
+   ## Close Browser

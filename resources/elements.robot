@@ -4,17 +4,17 @@ Documentation       Aqui temos o mapeamento dos elementos e localizadores
 ***Variables***
 #Login Scenario
 ${REGISTER}              id:loginregisterLink
-${USER}                  id:textfield-1017-inputEl     ##xpath=//input[contains(@type, 'text')]
+${USER}                  id:textfield-1019-inputEl     ##xpath=//input[contains(@type, 'text')]
 ${PASS}                  css:input[type='password']
-${BOTAO_ENTRAR}          id:button-1022-btnInnerEl    
-${TOMEI_CONH}            //*[@id="notificacoesNetpa_OK-btnInnerEl"]                 
-${BOTAO_TOMEI_CONH}      id:notificacoesNetpa_OK-btnEl
+${BOTAO_ENTRAR}          id:button-1024-btnInnerEl    
+${TOMEI_CONH}            xpath://*[@id="notificacoesNetpa_OK-btnInnerEl"]                 
+${BOTAO_TOMEI_CONH}      xpath://*[@id="notificacoesNetpa_OK"]
 ${DIV_ALERT}             xpath://div[@class="ajs-content"]
 ${BOTAO_OK}              xpath://button[@class="ajs-button ajs-ok"]
 
 #Book Rooms
-${LINK_RERSEVAR_SALA}
-${BOTAO_RESERVAR_SALA}
+${LINK_RERSEVAR_SALA}       xpath://*[@id="allservices"]/tbody/tr[1]/td[3]/a[9]
+${BOTAO_RESERVAR_SALA}      xpath://*[@id="button-1054-btnInnerEl"]
 ${ANO_LETIVO}
 ${INSTITUICAO}
 ${DATA_PRETENDIDA}

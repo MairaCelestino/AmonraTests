@@ -13,7 +13,7 @@ Sucess Login
          Dado que acesso a página principal 
          Quando submeto o meu utilizador "mariacp"
          E a palavra-chave "a" 
-         E clico em Entrar 
+         E clico em Entrar
          Então devo ser autenticado
 
 Login with nonexistent user

@@ -6,7 +6,7 @@ Resource        ../resources/base.robot
 
 Suite Setup     Open Session
 Test Setup      Sucess Loginn
-Test Teardown   Close Session  ### Suite Teardown só fecha o browser quando finalizar todos os cenários
+Suite Teardown   Close Session  ### Suite Teardown só fecha o browser quando finalizar todos os cenários
 
 ***Test Cases***
 Reservar Salas  
