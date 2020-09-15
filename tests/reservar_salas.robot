@@ -22,7 +22,8 @@ Mensagens de Validação
         Quando clico no link "Reservar Salas"
         E clico em "Reservar Sala"
         Então clico em OK
-        Devo ver a mensagem "Existem campos que não estão preenchidos ou contêm valores inválidos!"
+        Devo ver a mensagem "As suas alterações NÃO FORAM gravadas"
+        E Faço Logout
 
    
 

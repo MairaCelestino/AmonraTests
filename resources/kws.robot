@@ -41,15 +41,26 @@ Então devo ver a mensagem "${expect_message}"
     #${DIV_ALERT}   ${expect_message}
 Quando clico no link "Reservar Salas"
     Click Link         ${LINK_RERSEVAR_SALA}
+
 E clico em "Reservar Sala"
     Wait Until Element Is Visible       ${ElEMENTO_RESERVAR_SALA}  ##RESERVAR SALAS
     Sleep              3
     Click Element         ${BOTAO_RESERVAR_SALA}
+
 Então clico em OK
     Click Element         ${BOTAO_OK_RESERVA}
-Devo ver a mensagem "${MENSAGEM_VALIDACAO}"
-    Wait Until Element Is Visible    ${MENSAGEM_VALIDACAO}
-    Element Text Should Be           ${MENSAGEM_VALIDACAO}
-    Sleep              2
-    Click Element                    ${BOTAO_OK_AVISOS}
+
+Devo ver a mensagem "As suas alterações NÃO FORAM gravadas"
+    #Wait Until Element Is Visible    ${MENSAGEM_VALIDACAO}
+    Sleep                            2
+    #Wait Until Page Contains         ${MENSAGEM_VALIDACAO}
+    Wait Until Page Contains        As suas alterações NÃO FORAM gravadas
+    Sleep                            2
+    Click Button                    ${BOTAO_OK_AVISOS}
+    Sleep                            2
+    Click Button                    ${BOTAO_CANCELAR}
+E Faço Logout
+    Sleep                            2
+    Click Element                   ${SAIR}   
+    Wait Until Page Contains        Bem-vindo ao netP@       
  
