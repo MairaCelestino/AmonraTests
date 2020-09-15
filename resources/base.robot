@@ -20,6 +20,7 @@ Sucess Loginn
 ##Hooks (Ganchos)
 Open Session
     Open Browser    about:blank     chrome
+    Maximize Browser Window
     Set Selenium Implicit Wait   5
 
 Close Session

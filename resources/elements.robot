@@ -14,7 +14,11 @@ ${BOTAO_OK}              xpath://button[@class="ajs-button ajs-ok"]
 
 #Book Rooms
 ${LINK_RERSEVAR_SALA}       xpath://*[@id="allservices"]/tbody/tr[1]/td[3]/a[9]
+${ElEMENTO_RESERVAR_SALA}   xpath://*[@id="contenttwocolumns"]/h2
 ${BOTAO_RESERVAR_SALA}      xpath://*[@id="button-1054-btnInnerEl"]
+${BOTAO_OK_RESERVA}         xpath://button[@id="reservarSalaDialog_ok-btnEl"]
+${BOTAO_OK_AVISOS}          xpath://*[@id="ext-gen1019"]/div[12]/div[2]/div/div[4]/div[2]/button
+${MENSAGEM_VALIDACAO}       xpath://*[@id="ext-gen1019"]/div[10]/div[2]/div/div[3]/div/div/text()
 ${ANO_LETIVO}
 ${INSTITUICAO}
 ${DATA_PRETENDIDA}

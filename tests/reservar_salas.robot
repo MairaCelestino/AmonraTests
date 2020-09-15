@@ -18,9 +18,9 @@ Reservar Salas
         Devo ver a Situação "Em Apreciação"
 
 Mensagens de Validação
-        Dado que estou autenticado 
+        [tags]          reservarSala_ValoresInvalidos
         Quando clico no link "Reservar Salas"
-        E clico em "Reservar Sala" 
+        E clico em "Reservar Sala"
         Então clico em OK
         Devo ver a mensagem "Existem campos que não estão preenchidos ou contêm valores inválidos!"
 

@@ -42,6 +42,14 @@ Então devo ver a mensagem "${expect_message}"
 Quando clico no link "Reservar Salas"
     Click Link         ${LINK_RERSEVAR_SALA}
 E clico em "Reservar Sala"
-    Wait Until Element Is Visible       xpath://*[@id="contenttwocolumns"]/h2  ##RESERVAR SALAS
+    Wait Until Element Is Visible       ${ElEMENTO_RESERVAR_SALA}  ##RESERVAR SALAS
+    Sleep              3
+    Click Element         ${BOTAO_RESERVAR_SALA}
+Então clico em OK
+    Click Element         ${BOTAO_OK_RESERVA}
+Devo ver a mensagem "${MENSAGEM_VALIDACAO}"
+    Wait Until Element Is Visible    ${MENSAGEM_VALIDACAO}
+    Element Text Should Be           ${MENSAGEM_VALIDACAO}
     Sleep              2
-    Click Link         ${BOTAO_RESERVAR_SALA}
+    Click Element                    ${BOTAO_OK_AVISOS}
+ 
